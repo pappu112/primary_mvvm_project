@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 @Entity
 data class Quotes(
     @PrimaryKey(autoGenerate = false)
-    var id:Int,
-    var quote:String,
-    var author:String,
-    var thumbnail:String,
-    var created_at:String,
-    var updated_at:String
+    var id:Int? = null,
+    var quote:String? = null,
+    var author:String? = null,
+    var thumbnail:String? = null,
+    var created_at:String? = null,
+    var updated_at:String? = null
 
 )

@@ -9,6 +9,7 @@ import com.example.myapplication.data.repositories.UserRepository
 import com.example.myapplication.ui.auth.AuthViewModelFactory
 import com.example.myapplication.ui.auth.AuthviewModel
 import com.example.myapplication.ui.home.profile.ProfilrViewModelFactory
+import com.example.myapplication.ui.home.quotes.QuotesFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -28,6 +29,7 @@ class MVVMApplication: Application(), KodeinAware {
         bind() from singleton {QuotesRepository(instance(),instance())}
         bind() from singleton {AuthViewModelFactory(instance())}
         bind() from singleton {ProfilrViewModelFactory(instance())}
+        bind() from singleton {QuotesFactory(instance())}
 
     }
 }

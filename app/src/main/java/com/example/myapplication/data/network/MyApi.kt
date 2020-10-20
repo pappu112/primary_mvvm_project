@@ -30,7 +30,7 @@ interface MyApi {
         @Field("password") password: String
     ):Response<Authresponse>
 
-    @GET
+    @GET("quotes")
     suspend fun getQuotes(): Response<QuotesResponse>
 
     companion object{

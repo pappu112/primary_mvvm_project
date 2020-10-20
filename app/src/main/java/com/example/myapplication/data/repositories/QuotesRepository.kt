@@ -1,5 +1,6 @@
 package com.example.myapplication.data.repositories
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.data.db.Appdatabase
@@ -19,6 +20,7 @@ class QuotesRepository (
     init {
         quotes.observeForever {
             saveQuotes(it)
+            //Log.e("size",it.size.toString())
         }
 
     }
